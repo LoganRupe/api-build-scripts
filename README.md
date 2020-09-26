@@ -11,7 +11,6 @@ Build scripts used in DevOps Pipleline
 This repo contains scripts used for CI/CD DevOps Build Pipelines for API Development. It is referenced by my NestJS Example project here [https://github.com/LoganRupe/nestjs-example]() within the Azure DevOps Pipeline (`azure-pipelines.yml`).
 
 ````
-* /API_health_checker.ps1                           # API Health Checker script for Windows Build Machines
 * /API_health_checker.sh                            # API Health Checker script for Linux Build Machines
 ...
 ````
@@ -21,11 +20,10 @@ The API Health Checker scripts objective is to verify an API is healthy before r
 
 The API Health Checker scripts allow for two command line arguments, the URL to the health check for the API (e.g. http://host.docker.internal/health) and the timeout period in seconds (e.g. 60). 
 
-So for Windows this would be:
+~~So for Windows this would be:~~
 
 ```powershell
-# Run API Health Check against local docker container and timeout after a minute.
-./API_health_checker.ps1 http://host.docker.internal/health 60
+# Windows Build Machines now have BASH installed. See below.
 ```
 
 And for Linux this would be:
